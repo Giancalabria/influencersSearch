@@ -17,6 +17,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["src"],
+  "include": ["src", "netlify"],
   "exclude": ["node_modules", "build"]
 }
