@@ -1,11 +1,12 @@
-import dotenv from "dotenv";
-import fetch from "node-fetch";
+// filepath: /C:/Users/shinf/software/personal/influencers/netlify/functions/chatgpt.js
+const dotenv = require("dotenv");
+const fetch = require("node-fetch");
 
 dotenv.config();
 
 const apiKey = process.env.CHATGPT_API_KEY;
 
-export const callChatGPT = async (question) => {
+const callChatGPT = async (question) => {
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -25,3 +26,5 @@ export const callChatGPT = async (question) => {
   const data = await response.json();
   return data.choices[0].message.content;
 };
+
+module.exports = { callChatGPT };

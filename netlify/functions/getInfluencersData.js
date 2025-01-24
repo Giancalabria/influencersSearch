@@ -1,4 +1,4 @@
-import { callChatGPT } from "./chatgpt";
+const { callChatGPT } = require("./chatgpt");
 
 const getInfluencersData = async (event) => {
   const { influencersAmount, tweets, time, sources } = JSON.parse(event.body);
@@ -34,4 +34,4 @@ const getInfluencersData = async (event) => {
   };
 };
 
-export { getInfluencersData as handler };
+module.exports = { handler: getInfluencersData };
