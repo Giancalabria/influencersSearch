@@ -1,12 +1,16 @@
 // filepath: /C:/Users/shinf/software/personal/influencers/netlify/functions/chatgpt.js
 const dotenv = require("dotenv");
-const fetch = require("node-fetch");
 
 dotenv.config();
 
 const apiKey = process.env.CHATGPT_API_KEY;
 
 const callChatGPT = async (question) => {
+  console.log("API Key:", apiKey ? "Loaded successfully" : "Not found");
+  if (!apiKey) {
+    throw new Error("API Key not found");
+  }
+
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
