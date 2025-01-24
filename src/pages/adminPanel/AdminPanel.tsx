@@ -3,7 +3,7 @@ import { Button, Typography } from "@mui/material";
 export const AdminPanel = () => {
   const handleGetInfluencersData = async () => {
     try {
-      const response = await fetch("./netlify/functions/getInfluencersData", {
+      const response = await fetch("/.netlify/functions/getInfluencersData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
