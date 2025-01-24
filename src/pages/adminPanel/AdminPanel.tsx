@@ -12,7 +12,7 @@ export const AdminPanel = () => {
           influencersAmount: 1,
           tweets: 10,
           time: "1 month",
-          sources: ["source1", "source2"],
+          sources: ["New England Journal of Medicine", "The Lancet"],
         }),
       });
 
