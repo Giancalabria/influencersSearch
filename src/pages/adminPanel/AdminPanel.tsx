@@ -10,7 +10,7 @@ export const AdminPanel = () => {
         },
         body: JSON.stringify({
           influencersAmount: 1,
-          tweets: 10,
+          tweets: 5,
           time: "1 month",
           sources: ["New England Journal of Medicine", "The Lancet"],
         }),
